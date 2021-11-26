@@ -42,3 +42,8 @@ py ./main.py
 4. **_amount_** = Jumlah traffic (jika tidak menggunakan proxy)
 5. **_headless_** = Menampilkan browser atau tidak
 6. **_interval_** = Selang waktu
+
+## Dukung saya di
+
+[Saweria](https://saweria.co/yukebrillianth)
+[SociaBuzz](https://sociabuzz.com/yukebrillianth/tribe)
