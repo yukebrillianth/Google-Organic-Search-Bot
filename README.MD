@@ -13,7 +13,7 @@
 1. Clone this repository
 
 ```shell
-git clone https://github.com/yukebrillianth/google-organic-search-bot.git GOSB
+git clone https://github.com/yukebrillianth/Google-Organic-Search-Bot.git GOSB
 
 cd GOSB
 ```
