@@ -13,10 +13,12 @@
 1. Clone this repository
 
 ```shell
-git clone https://github.com/yukebrillianth/Google-Organic-Search-Bot.git GOSB
+git clone --single-branch --branch main https://github.com/yukebrillianth/Google-Organic-Search-Bot.git GOSB
 
 cd GOSB
 ```
+
+atau download via [Release Page](https://github.com/yukebrillianth/Google-Organic-Search-Bot/releases/tag/Beta)
 
 2. Install required packages
 
