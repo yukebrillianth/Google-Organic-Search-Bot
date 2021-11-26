@@ -13,6 +13,7 @@ class Scrapper:
     pages = 100
     firefoxCapabilities = webdriver.DesiredCapabilities.FIREFOX
     Proxy = Proxy()
+    randomProxy = Proxy.getRandomProxy()
     Options = Options()
     config = None
 
@@ -25,8 +26,7 @@ class Scrapper:
         # Setting Proxy
         if self.config["use_proxy"] == True:
             # Get random proxy and setting proxy
-            randomProxy = self.Proxy.getRandomProxy()
-            proxy = randomProxy["ip"]+":"+randomProxy["port"]
+            proxy = self.randomProxy["ip"]+":"+self.randomProxy["port"]
             self.firefoxCapabilities['proxy'] = {
                 "proxyType": "MANUAL",
                 "httpProxy": proxy,
@@ -70,13 +70,13 @@ class Scrapper:
                 if self.config["interval"] != "Default":
                     INTERVAL = self.config["interval"]
                 else:
-                    INTERVAL = 4200
+                    INTERVAL = random.randint(3000, 6000)
                 print("\033[93m"+"Bot akan berjalan lagi setelah " +
                       INTERVAL+" detik"+"\033[0m")
             except Exception as e:
                 if self.config["use_proxy"] == True:
                     print(
-                        "\033[93m"+"Sepertinya proxy anda bermasalah...."+"\033[0m")
+                        "\033[93m"+"Sepertinya proxy anda ("+self.randomProxy["ip"]+":"+self.randomProxy["port"]+") bermasalah ...."+"\033[0m")
                 print(e)
                 try:
                     print("Close browser")
